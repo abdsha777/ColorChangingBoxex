@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change</title>
+</head>
+<style>
+    body{
+        background-color: lightblue;
+    }
+    .lines{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        margin: 20px;
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    
+    <div id="line1" class="lines"> 
+        <div class="box" id="first"></div>
+        <div class="box" id="second"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div id="line2" class="lines"> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="last"></div>
+    </div>
+    <div id="line=3" class="lines"> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="last"></div>
+    </div>
+    <div id="line4" class="lines"> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="last"></div>
+    </div>
+</body>
+<script>
+    
+    var p = document.querySelectorAll(".box");
+    p.forEach(function(el) {
+    el.addEventListener('mouseenter', myEventHandler);
+    })
+    function myEventHandler(event) {
+        
+        if(event.target.style.backgroundColor=='blue'){
+            event.target.style.backgroundColor='red';
+        }
+        else if(event.target.style.backgroundColor=='red'){
+            event.target.style.backgroundColor='green'
+        }
+        else{
+            event.target.style.backgroundColor='blue';
+        }
+    }
+
+    
+</script>
+</html>
