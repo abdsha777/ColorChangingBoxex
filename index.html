@@ -52,6 +52,13 @@
         <div class="box"></div>
         <div class="box" id="last"></div>
     </div>
+<div id="line5" class="lines"> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="last"></div>
+    </div>
 </body>
 <script>
     
@@ -65,7 +72,10 @@
             event.target.style.backgroundColor='red';
         }
         else if(event.target.style.backgroundColor=='red'){
-            event.target.style.backgroundColor='green'
+            event.target.style.backgroundColor='green';
+        }
+else if(event.target.style.backgroundColor=='green'){
+            event.target.style.backgroundColor='orange';
         }
         else{
             event.target.style.backgroundColor='blue';
