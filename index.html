@@ -65,7 +65,7 @@
     p.forEach(function(el) {
     el.addEventListener('click', myEventHandler);
     })
-document.getElementsByClassName("box").click();
+
     function myEventHandler(event) {
         
         if(event.target.style.backgroundColor=='blue'){
@@ -86,6 +86,7 @@ else if(event.target.style.backgroundColor=='pink'){
         else{
             event.target.style.backgroundColor='blue';
         }
+
     }
 
     
