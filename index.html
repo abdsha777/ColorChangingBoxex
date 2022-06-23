@@ -60,13 +60,12 @@
         <div class="box" id="last"></div>
     </div>
 </body>
-<script>
-    
-document.getElementByClass("box").click();
+
     var p = document.querySelectorAll(".box");
     p.forEach(function(el) {
     el.addEventListener('click', myEventHandler);
     })
+document.getElementsByClassName("box").click();
     function myEventHandler(event) {
         
         if(event.target.style.backgroundColor=='blue'){
